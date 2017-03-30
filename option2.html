@@ -19,7 +19,7 @@ Keep the change
 
 body {
 
-background-color: #00FFFF ; 
+background-color: #ADD8E6 ; 
 
 
 }
@@ -32,11 +32,20 @@ margin-top : 200px;
 
 }
 
-#bank {
+#select {
 
 width : 120px;
 
 background-color: blue ; 
+
+}
+
+#bank {
+
+
+background-color: white ; 
+
+border : 10px;
 
 }
 
@@ -52,16 +61,20 @@ background-color: blue ;
 
 <div class="col-md-12" id="col">
 
-<p class="text-center" style="font-size: 20px"> What Bank Do you use ?  </p>
+<p class="text-center" style="font-size: 30px; font-family: helvetica"> What Bank Do you use ?  </p>
 <center>
 <p class="text-center" style="margin-top: 50px"> 
 <center> 
   
-  <select class="form-control" id="bank">
-    <option>CHOOSE</option>
-    <option>WEMA</option>
-    <option>WEMA</option>
-    <option>WEMA</option>
+  <select class="form-control" id="select">
+  
+    <option  selected="selected" disabled="disabled">CHOOSE</option>
+    <option id="bank">WEMA</option>
+    <option id="bank">WEMA</option>
+    <option id="bank">WEMA</option>
+    <option id="bank">WEMA</option>
+    <option id="bank">WEMA</option>
+    <option id="bank">WEMA</option>
   </select>
   </center>
  </p>

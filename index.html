@@ -1,6 +1,7 @@
 <!doctype>
 <html> 
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<title>Keep the change</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -48,7 +49,7 @@
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 30px;"> Leave here please. For twitter boys only!!! </p>
 						<center>
-							<p class="text-center" style="margin-top: 50px"> <button  ng-click="reloadPage()" type="button" class="btn btn-primary btn-lg btn-block">Start All Over </button> </p>
+							<p class="text-center" style="margin-top: 50px"> <button  ng-click="reloadPage()" type="button" class="btn btn-default btn-lg btn-block">Start All Over </button> </p>
 						</center>
 					</div>
 				</div>
@@ -80,7 +81,7 @@
 				              <select class="form-control" id="select" style="width:170px" ng-model="bank" ng-options="x for x in banks"></select>
 
 						</center>
-						<p class="text-center" ng-show="bank" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-primary btn-lg btn-block">Next  </button> </p>
+						<p class="text-center" ng-show="bank" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-default btn-lg btn-block">Next  </button> </p>
 					</div>
 				</div>
 				<div class="row vertical-center-row animated fadeInUp" ng-show="step==3">
@@ -99,7 +100,7 @@
 						</p>
 						<center>
 							<p class="text-center" style="margin-top: 50px"> 
-								<button type="button" ng-click="endCalc()" class="btn btn-primary btn-lg btn-block">
+								<button type="button" ng-click="endCalc()" class="btn btn-default btn-lg btn-block">
 									Next
 								</button>
 							</p>
@@ -120,11 +121,11 @@
 				          	<a class="twitter-share-button"
 							  href="https://twitter.com/intent/tweet?text=Lol!%20Tweeps%2C%20I%20just%20found%20out%20I%20could%20gain%20₦{{change}}%20change%20on%20a%20₦{{dateCost}}%20date.%20Check%20yours%20now%20http%3A%2F%2Fwww.keepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae"
 							  data-size="large">
-								<button type="button" class="btn btn-primary btn-lg btn-block" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
+								<button type="button" class="btn btn-default btn-lg btn-block" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
 					            SHARE ON TWITTER 
 					            </button> 
 				            </a>
-				            <button type="button" ng-click="reloadPage()" class="btn btn-primary btn-lg btn-block" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
+				            <button type="button" ng-click="reloadPage()" class="btn btn-default btn-lg btn-block" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
 					            RESTART
 					            </button> 
 				          </p>

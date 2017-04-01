@@ -4,10 +4,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<title>Keep the change</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<link rel="stylesheet" href="assets/animate.css">
 		<style>
 			body {
-				background-color: #00FFFF ;
+				background-color: #3c6e71 ;
 			}
 			#col {
 				margin-top : 200px;
@@ -16,67 +15,14 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-
-			<div ng-app="myApp" ng-controller="myCtrl">
-				<div class="row vertical-center-row animated fadeInDown" ng-show="step==-1">
-					<div class="col-md-12" id="col">
-						<p class="text-center" style="font-size: 30px; font-family: helvetica"> Leave here please. For twitter boys only!!! </p>
-						<center>
-							<p class="text-center" style="margin-top: 50px"> <button  ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Start All Over </button> </p>
-						</center>
-					</div>
-				</div>
-				<div class="row vertical-center-row animated fadeInDown" ng-show="step==0">
-					<div class="col-md-12" id="col">
-						<p class="text-center" style="font-size: 30px; font-family: helvetica"> Find how much change you can get from a Date </p>
-						<center>
-							<p class="text-center" style="margin-top: 50px"> <button  ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Start </button> </p>
-						</center>
-					</div>
-				</div>
-				<div class="row vertical-center-row animated slideInLeft" ng-show="step==1">
-					<div class="col-md-12" id="col">
-						<p class="text-center" style="font-size: 30px"> Which one are you ?  </p>
-						<center>
-							<p class="text-center" style="margin-top: 50px"> 
-							<label><input type="radio" ng-model="gender" value="guy">Guy</label>
-						 		 &nbsp &nbsp  &nbsp &nbsp 
-						  	<label><input type="radio" ng-model="gender" value="babe">Babe</label>
-							</p>
-						</center>
-						<p class="text-center" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
-					</div>
+			<div class="row  vertical-center-row">
+				<div class="col-md-12" id="col">
+					<p class="text-center" style="font-size: 30px; font-family: futura"> Find how much change you can get from a Date </p>
+					<center>
+						<p class="text-center" style="margin-top: 50px"> <button type="button" class="btn btn-secondary" style="width : 120px; font-family: open sans">Start </button> </p>
+					</center>
 				</div>
 			</div>
 		</div>
 	</body>
-	<script>
-		var app = angular.module('myApp', []);
-		app.controller('myCtrl', function($scope) {
-		    $scope.names = ["Emil", "Tobias", "Linus"];
-		    $scope.step = 0;
-		    $scope.gender = "";
-		    $scope.banks = ['Wema Bank, First Bank'];
-		    $scope.nextStep = function(step)
-		    {
-		    	if(step == 1)
-		    	{
-		    		if($scope.gender == 'babe')
-		    		{
-		    			$scope.fail();
-		    			return;
-		    		}
-		    	}
-		    	$scope.step += 1;
-		    }
-
-		    $scope.fail = function()
-		    {
-		    	$scope.step = -1;
-		    }
-
-		    $scope.reloadPage = function(){$window.location.reload();}
-
-		});
-	</script>
 </html>

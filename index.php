@@ -1,7 +1,6 @@
 <?php 
 
-//header( 'Location: /.html' ) ; 
+header( 'Location: /index.html' ) ; 
 
- include_once("index.html"); 
-
+ 
  ?>

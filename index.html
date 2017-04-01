@@ -8,9 +8,16 @@
 		<style>
 			body {
 				background-color: #3c6e71 ;
+				color: white;
+				font-family: futura;
 			}
 			#col {
 				margin-top : 200px;
+			}
+			button {
+				color: black;
+				text-transform: uppercase;
+				font-family: futura;
 			}
 		</style>
 	</head>
@@ -19,7 +26,7 @@
 			<div ng-app="myApp" ng-controller="myCtrl">
 				<div class="row vertical-center-row animated fadeInDown" ng-show="step==-1">
 					<div class="col-md-12" id="col">
-						<p class="text-center" style="font-size: 30px; font-family: helvetica"> Leave here please. For twitter boys only!!! </p>
+						<p class="text-center" style="font-size: 30px;"> Leave here please. For twitter boys only!!! </p>
 						<center>
 							<p class="text-center" style="margin-top: 50px"> <button  ng-click="reloadPage()" type="button" class="btn btn-secondary" style="width : 120px">Start All Over </button> </p>
 						</center>
@@ -27,9 +34,9 @@
 				</div>
 				<div class="row  vertical-center-row animated fadeInDown" ng-show="step==0">
 					<div class="col-md-12" id="col">
-						<p class="text-center" style="font-size: 30px; font-family: futura; color : white"> Find how much change you can get from a Date </p>
+						<p class="text-center" style="font-size: 30px;"> Find out how much change you can get from a Date </p>
 						<center>
-							<p class="text-center" style="margin-top: 50px"> <button type="button" ng-click="nextStep(step)"  class="btn btn-secondary" style="width : 120px; font-family: open sans">Start </button> </p>
+							<p class="text-center" style="margin-top: 50px"> <button type="button" ng-click="nextStep(step)"  class="btn btn-secondary" style="width : 120px;">Start </button> </p>
 						</center>
 					</div>
 				</div>
@@ -37,10 +44,10 @@
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 30px"> Which one are you ?  </p>
 						<center>
-							<p class="text-center" style="margin-top: 50px"> 
-							<label><input type="radio" ng-model="gender" value="guy">Guy</label>
+							<p class="text-center" style="margin-top: 50px" ng-init="gender='guy'"> 
+							<label><input type="radio" ng-model="gender" value="guy" ng-selected="true"> GUY</label>
 						 		 &nbsp &nbsp  &nbsp &nbsp 
-						  	<label><input type="radio" ng-model="gender" value="babe">Babe</label>
+						  	<label><input type="radio" ng-model="gender" value="babe"> BABE</label>
 							</p>
 						</center>
 						<p class="text-center" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
@@ -50,22 +57,15 @@
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 30px; font-family: helvetica"> What Bank Do you use ?  </p>
 						<center>
-							<select class="form-control" id="select" style="width:170px">
-				              <option  selected="selected" disabled="disabled">CHOOSE</option>
-				              <option id="bank">WEMA</option>
-				              <option id="bank">WEMA</option>
-				              <option id="bank">WEMA</option>
-				              <option id="bank">WEMA</option>
-				              <option id="bank">WEMA</option>
-				              <option id="bank">WEMA</option>
-				            </select>
+				              <select class="form-control" id="select" style="width:170px" ng-model="bank" ng-options="x for x in banks"></select>
+
 						</center>
-						<p class="text-center" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
+						<p class="text-center" ng-show="bank" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
 					</div>
 				</div>
 				<div class="row vertical-center-row animated slideInLeft" ng-show="step==3">
 					<div class="col-md-12" id="col">
-						<p class="text-center" id="text" style="font-size: 20px"> How much did you plan spending on the date ?  </p>
+						<p class="text-center" id="text" style="font-size: 20px"> Oshey! Bahd guy! So how much did you spend on the date?  </p>
 						<p class="text-center" style="margin-top: 50px; color : white">  <label>Enter Value in naira</label>
 						<center>
 							<input type="text" class="form-control text-center" ng-model="dateCost" placeholder="Example :  &#8358 3800" id="Value" style="width:200px">
@@ -84,20 +84,23 @@
 				<div class="row vertical-center-row animated slideInLeft" ng-show="step==4">
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 20px">
-				            Based on our calculations ,   your refund is 
+				            Based on our calculations, your refund is 
 				          </p>
 				          <p class="text-center" style="margin-top: 50px; font-size: 30px">
-				            &#8358 {{refund}}  
+				            {{refund | currency:"&#8358;"}}  
 				          </p>
 				          <p class="text-center" style="margin-top: 50px; font-size: 30px">  #KeepTheChangeBruh  </p>
 				          <p class="text-center" style="margin-top: 50px"> 
 				          	<a class="twitter-share-button"
-							  href="https://twitter.com/intent/tweet?text=Hello%20world%20₦{{refund}}"
+							  href="https://twitter.com/intent/tweet?text=Lol!%20Tweeps%2C%20I%20just%20found%20out%20I%20could%20keep%20₦{{change}}%20change%20on%20a%20₦{{refund}}%20date.%20Check%20yours%20now%20http%3A%2F%2Fkeepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae"
 							  data-size="large">
 								<button type="button" class="btn btn-secondary" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
 					            SHARE ON TWITTER 
 					            </button> 
 				            </a>
+				            <button type="button" ng-click="reloadPage()" class="btn btn-secondary" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
+					            RESTART
+					            </button> 
 				          </p>
 					</div>
 				</div>
@@ -109,8 +112,11 @@
 		app.controller('myCtrl', function($scope) {
 		    $scope.step = 0;
 		    $scope.gender = "";
-		    $scope.dateCost = 0;
+		    $scope.dateCost;
+		    $scope.bank = null;
+		    $scope.banks = ['Wema Bank', 'Wema Bank', 'Wema Bank', 'Wema Bank'];
 		    $scope.refund = 0;
+		    $scope.change;
 		    $scope.nextStep = function(step)
 		    {
 		    	if(step == 1)
@@ -132,6 +138,7 @@
 		    $scope.endCalc = function()
 		    {
 		    	$scope.refund = parseInt($scope.dateCost * 1.3158);
+		    	$scope.change = parseInt($scope.refund - $scope.dateCost);
 		    	$scope.step = 4;
 		    }
 

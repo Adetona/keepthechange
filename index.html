@@ -10,9 +10,10 @@
 				background-color: #3c6e71 ;
 				color: white;
 				font-family: futura;
+				font-size: 4em;
 			}
 			#col {
-				margin-top : 200px;
+				margin-top : 20%;
 			}
 			button {
 				color: black;
@@ -47,15 +48,15 @@
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 30px;"> Leave here please. For twitter boys only!!! </p>
 						<center>
-							<p class="text-center" style="margin-top: 50px"> <button  ng-click="reloadPage()" type="button" class="btn btn-secondary" style="width : 140px">Start All Over </button> </p>
+							<p class="text-center" style="margin-top: 50px"> <button  ng-click="reloadPage()" type="button" class="btn btn-primary btn-lg btn-block">Start All Over </button> </p>
 						</center>
 					</div>
 				</div>
 				<div class="row  vertical-center-row animated fadeInDown" ng-show="step==0">
 					<div class="col-md-12" id="col">
-						<p class="text-center" style="font-size: 30px;"> Find out how much change you can get from a Date </p>
+						<p class="text-center"> Find out how much change you can get from a Date </p>
 						<center>
-							<p class="text-center" style="margin-top: 50px"> <button type="button" ng-click="nextStep(step)"  class="btn btn-secondary" style="width : 120px;">Start </button> </p>
+							<p class="text-center" style="margin-top: 50px"> <button type="button" ng-click="nextStep(step)"  class="btn btn-default btn-lg btn-block">Start </button> </p>
 						</center>
 					</div>
 				</div>
@@ -64,12 +65,12 @@
 						<p class="text-center" style="font-size: 30px"> Which one are you ?  </p>
 						<center>
 							<p class="text-center" style="margin-top: 50px" ng-init="gender='guy'"> 
-							<label><input type="radio" ng-model="gender" value="guy" ng-selected="true"> GUY</label>
+							<label><input type="radio" class="form-control" ng-model="gender" value="guy" ng-selected="true"> GUY</label>
 						 		 &nbsp &nbsp  &nbsp &nbsp 
-						  	<label><input type="radio" ng-model="gender" value="babe"> BABE</label>
+						  	<label><input type="radio" class="form-control" ng-model="gender" value="babe"> BABE</label>
 							</p>
 						</center>
-						<p class="text-center" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
+						<p class="text-center" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-default btn-lg btn-block">Next  </button> </p>
 					</div>
 				</div>
 				<div class="row vertical-center-row animated fadeInDown" ng-show="step==2">
@@ -79,7 +80,7 @@
 				              <select class="form-control" id="select" style="width:170px" ng-model="bank" ng-options="x for x in banks"></select>
 
 						</center>
-						<p class="text-center" ng-show="bank" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
+						<p class="text-center" ng-show="bank" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-primary btn-lg btn-block">Next  </button> </p>
 					</div>
 				</div>
 				<div class="row vertical-center-row animated fadeInUp" ng-show="step==3">
@@ -87,13 +88,18 @@
 						<p class="text-center" id="text" style="font-size: 20px"> Oshey! Bahd guy! So how much did you spend on the date?  </p>
 						<p class="text-center" style="margin-top: 50px; color : white">  <label>Enter Value in naira</label>
 						<center>
-							<input type="number" class="form-control text-center" ng-model="dateCost" placeholder="Example :  &#8358 3800" id="Value" style="width:200px">
+
+							<div class="input-group">
+						      <div class="input-group-addon">&#8358;</div>
+						      <input type="number" class="form-control" ng-model="dateCost" placeholder="Example :  &#8358 3800">
+						      <div class="input-group-addon">.00</div>
+						    </div>
 
 							</center> 
 						</p>
 						<center>
 							<p class="text-center" style="margin-top: 50px"> 
-								<button type="button" ng-click="endCalc()" class="btn btn-secondary" style="width : 120px">
+								<button type="button" ng-click="endCalc()" class="btn btn-primary btn-lg btn-block">
 									Next
 								</button>
 							</p>
@@ -114,11 +120,11 @@
 				          	<a class="twitter-share-button"
 							  href="https://twitter.com/intent/tweet?text=Lol!%20Tweeps%2C%20I%20just%20found%20out%20I%20could%20gain%20₦{{change}}%20change%20on%20a%20₦{{dateCost}}%20date.%20Check%20yours%20now%20http%3A%2F%2Fwww.keepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae"
 							  data-size="large">
-								<button type="button" class="btn btn-secondary" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
+								<button type="button" class="btn btn-primary btn-lg btn-block" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
 					            SHARE ON TWITTER 
 					            </button> 
 				            </a>
-				            <button type="button" ng-click="reloadPage()" class="btn btn-secondary" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
+				            <button type="button" ng-click="reloadPage()" class="btn btn-primary btn-lg btn-block" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
 					            RESTART
 					            </button> 
 				          </p>

@@ -19,6 +19,15 @@
 				text-transform: uppercase;
 				font-family: futura;
 			}
+			.footer {
+				  position: absolute;
+				  right: 0;
+				  bottom: 0;
+				  left: 0;
+				  padding: 1rem;
+				  background-color: #efefef;
+				  text-align: center;
+				}
 		</style>
 	</head>
 	<body>
@@ -40,7 +49,7 @@
 						</center>
 					</div>
 				</div>
-				<div class="row vertical-center-row animated slideInLeft" ng-show="step==1">
+				<div class="row vertical-center-row animated fadeInUp" ng-show="step==1">
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 30px"> Which one are you ?  </p>
 						<center>
@@ -53,7 +62,7 @@
 						<p class="text-center" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
 					</div>
 				</div>
-				<div class="row vertical-center-row animated slideInLeft" ng-show="step==2">
+				<div class="row vertical-center-row animated fadeInDown" ng-show="step==2">
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 30px; font-family: helvetica"> What Bank Do you use ?  </p>
 						<center>
@@ -63,7 +72,7 @@
 						<p class="text-center" ng-show="bank" style="margin-top: 50px"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary" style="width : 120px">Next  </button> </p>
 					</div>
 				</div>
-				<div class="row vertical-center-row animated slideInLeft" ng-show="step==3">
+				<div class="row vertical-center-row animated fadeInUp" ng-show="step==3">
 					<div class="col-md-12" id="col">
 						<p class="text-center" id="text" style="font-size: 20px"> Oshey! Bahd guy! So how much did you spend on the date?  </p>
 						<p class="text-center" style="margin-top: 50px; color : white">  <label>Enter Value in naira</label>
@@ -81,7 +90,7 @@
 						</center>
 					</div>
 				</div>
-				<div class="row vertical-center-row animated slideInLeft" ng-show="step==4">
+				<div class="row vertical-center-row animated fadeInDown" ng-show="step==4">
 					<div class="col-md-12" id="col">
 						<p class="text-center" style="font-size: 20px">
 				            Based on our calculations, your refund is 
@@ -89,10 +98,11 @@
 				          <p class="text-center" style="margin-top: 50px; font-size: 30px">
 				            {{refund | currency:"&#8358;"}}  
 				          </p>
+				          <p class="text-center"><small>*whispers* With {{change | currency:"&#8358;"}} change. </small>
 				          <p class="text-center" style="margin-top: 50px; font-size: 30px">  #KeepTheChangeBruh  </p>
 				          <p class="text-center" style="margin-top: 50px"> 
 				          	<a class="twitter-share-button"
-							  href="https://twitter.com/intent/tweet?text=Lol!%20Tweeps%2C%20I%20just%20found%20out%20I%20could%20keep%20₦{{change}}%20change%20on%20a%20₦{{refund}}%20date.%20Check%20yours%20now%20http%3A%2F%2Fkeepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae"
+							  href="https://twitter.com/intent/tweet?text=Lol!%20Tweeps%2C%20I%20just%20found%20out%20I%20could%gain%20₦{{change}}%20change%20on%20a%20₦{{dateCost}}%20date.%20Check%20yours%20now%20http%3A%2F%2Fkeepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae"
 							  data-size="large">
 								<button type="button" class="btn btn-secondary" id="button" style="background-color: #4099FF; font-family: futura; text-color : white ">
 					            SHARE ON TWITTER 
@@ -105,6 +115,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="footer">
+			<a href="about.html">About</a>
 		</div>
 	</body>
 		<script>

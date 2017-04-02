@@ -1,0 +1,226 @@
+body {
+    color: white;
+    font-family: futura;
+}
+
+.step {
+    height: 100vh;
+    background-image: url('../image/pattern.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.stepminusone {
+    background-color: #3c6e71;
+}
+.stepzero {
+    background-color: #3c6e71;
+}
+.stepone {
+    background-color: #C76146;
+}
+.steptwo {
+    background-color: #98C1D9;
+}
+.stepthree {
+    background-color: #5B85AA;
+}
+.stepfour {
+    background-color: #F4D06F;
+}
+.next-btn:hover, .next-btn:focus {
+    outline: none;
+}
+
+.stepminusone .title {
+    font-size: 30px;
+}
+.stepzero .title {
+    font-size: 30px;
+}
+.stepzero .next-btn {
+    margin-top: 50px;
+}
+.stepzero .next-btn button {
+    fmargin-top: 50px;
+    width : 120px;
+    background-color: white;
+    color: black;
+    height: 45px;
+}
+.stepone .title {
+    font-size: 30px;
+}
+.stepone .next-btn {
+    margin-top: 50px;
+}
+.stepone .options {
+    margin-top: 50px;
+}
+.stepone .options label {
+    color: #444242;
+    background-color: white;
+    padding: 7px 17px;
+}
+.stepone .next-btn button {
+    margin-top: 50px;
+    width : 120px;
+    background-color: white;
+    color: black;
+    height: 45px;
+}
+.steptwo .title {
+    font-size: 30px;
+}
+.steptwo select {
+    width: 200px;
+    margin: 0 auto;
+    background-color: #2f7dab;
+    border: none;
+    border-radius: 0;
+    color: white;
+    -webkit-appearance: none;
+    height: 45px;
+}
+.steptwo .next-btn button {
+    margin-top: 50px;
+    width : 120px;
+    background-color: white;
+    color: black;
+    height: 45px;
+}
+.stepthree .title {
+    font-size: 20px;
+}
+.stepthree .subtitle {
+    margin-top: 50px;
+    color : white"
+}
+.stepthree .amount-input {
+    width: 200px;
+    margin: 0 auto
+}
+.stepthree .next-btn {
+    margin-top: 50px
+}
+.stepthree .next-btn button {
+    width : 120px;
+    background-color: white;
+    color: black;
+    height: 45px;
+}
+.stepfour .title{
+    font-size: 20px
+}
+.stepfour .refund{
+    margin-top: 50px;
+    font-size: 50px;
+}
+.stepfour .change{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.stepfour .keepthechange{
+    margin-top: 50px;
+    font-size: 30px;
+}
+.stepfour .share {
+    margin-top: 50px
+}
+.stepfour .next-btn{
+    background-color: #cccccc;
+    font-family: futura;
+    color: #676161;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+}
+.stepfour .next-btn:hover{
+    background-color: #4099FF;
+    font-family: futura;
+    color: white !important;
+}
+.stepfour .twitter-t {
+    background-color: #303d48;
+    padding: 5px 10px 10px 10px;
+    margin-right: -5px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+}
+.stepfour .twitter-btn {
+    background-color: #4099ff;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 6px 12px 9px 12px;
+}
+.stepfour .twitter-share-button:hover {
+    text-decoration: none
+}
+.about-btn {
+    background-color: #cccccc;
+    font-family: futura;
+    color: #676161;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+}
+.about-body {
+    background-color: 	#9ad5ca ;
+    color : white;
+    font-size: 12px;
+}
+.about-body .about {
+    margin-top : 100px;
+}
+.makers {
+    margin-top: 50px
+}
+.about-us-mobile {
+     width: 80px;
+     margin: 0 auto;
+     display: inline-block;
+}
+.makers .inner {
+    margin: 0 auto;
+    display: table;
+}
+
+.about-us-link {
+    display: inline-block;
+    margin-left: 15px;
+}
+.about-us-link p, .about-us-link a {
+    color: white;
+}
+.about .title {
+    font-size: 30px; font-family: futura;
+}
+.about .subtitle {
+    margin-top: 30px; font-size: 15px;
+}
+.about .content {
+    font-size: 14px; font-family: open sans;
+}
+.home-btn {
+    background-color: #cccccc;
+    font-family: futura;
+    color: #676161;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    width : 120px;
+    margin-top:50px;
+}
+.makers .open-source {
+    margin-top: 40px;
+}

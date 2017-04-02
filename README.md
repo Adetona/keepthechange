@@ -30,7 +30,7 @@ Based upon the backstory of the [#KeepTheChangeBruh](https://twitter.com/hashtag
 ## Author(s)
 
 - [Abiodun Adetona](https://github.com/Adetona) - _Frontend Design_
-- [Abati Adewale](https://github.com/acekyd) - _Logo Design, SEO and JS_
+- [Adewale Abati ](https://github.com/acekyd) - _Logo Design, SEO and JS_
 - [Benjamin Dada](https://github.com/Benjamin-Dada )  - Project manager
 - [Early Attoh](#) - _UI/UX_
 - [Ikechi Michael](https://github.com/mykeels) - _Documentation_ 😋

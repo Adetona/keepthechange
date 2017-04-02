@@ -1,0 +1,1 @@
+Textformat=function(a){var b=this;b.bold=!1,b.italic=!1,b.text="New Text",b.font="Amarante",b.size=100,b.alignment="center",void 0!=a&&(b.text=a),b.clone=function(){var a=new Textformat;return a.bold=b.bold,a.italic=b.italic,a.text=b.text,a.font=b.font,a.size=b.size,a.alignment=b.alignment,a}};

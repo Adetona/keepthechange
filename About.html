@@ -1,139 +1,84 @@
-			<!doctype html>
-			<html>
-				<head>
-					<meta name="viewport" content="width=device-width, initial-scale=1.0">
-					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-					<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-					<title>
-						Keep the change 
-					</title>
-					<style> 
-						body {
-						background-color: 	#9ad5ca ; 
-						color : white;
-						font-family: futura;
-						}
-						#col {
-						margin-top : 100px;
-						}
-						a .btn {
-						width : 160px;
-						color: black;
-						}
-		 #img-size {
+<!doctype html>
+<html>
+<head>
+	<title>Keep the change</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/app.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		width : 120px;
-
-		height: 120px ; 
-
-		}
-
-		#img-text {
-
-
-		}
-		.footer {
-				  position: absolute;
-				  right: 0;
-				  bottom: 0;
-				  left: 0;
-				  padding: 1rem;
-				  background-color: #efefef;
-				  text-align: center;
-				}
-					</style>
-				</head>
-				<body>
-					<script>
-					  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-					  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-					  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-					  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-					  ga('create', 'UA-96571593-1', 'auto');
-					  ga('send', 'pageview');
-
-					</script>
-					<div class="container-fluid">
-						<div class="row pull-right">
-							<div class="col-md-12">
-								<a href="index.html"><button type="button" class="btn btn-secondary" style="width : 120px; margin-top : 50px">HOME</button></a>
-							</div>
-						</div>
-					</div>
-					<div class="container-fluid">
-						<div class="row  vertical-center-row">
-							<div class="col-md-12" id="col">
-								<p class="text-center" style="font-size: 30px; font-family: futura">
-									About this
-								</p>
-								<p class="text-center" style="margin-top: 30px; font-size:20px ">
-									It all started with <a href="https://twitter.com/Missmoshiku/status/847173800198373379" style="color:red">this tweet</a>
-								</p>
-								<p class="text-center" style="font-size: 14px; font-family: open sans">  This site was made purely for laughs, don't take it too seriously.</br>
-								On the other hand , serious work was done to make it happen.
-
-									</p>
-								<p class="text-center" style="font-size : 16px; font-family: open sans"> 
-									That being said , meet the "twitter boys" behind it.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					 <div class="container-fluid">
-					 	<div class="col-md-8 col-md-offset-2">
-							<div class="row  vertical-center-row" style="margin-top: 50px;">
-								<div class="col-md-6">
-									<center> 
-										<img src="image/ben.jpg" alt="" id="img-size" class="img-circle img-responsive about-us-mobile" >
-							 			<a href="https://twitter.com/DadaBen_"> @DadaBen_ </a>
-									</center>
-								</div>
-								<div class="col-md-6">
-									<center> 
-										<img src="image/early.jpg" alt="" class="img-circle img-responsive about-us-mobile" id="img-size"> <a href="https://twitter.com/earlyattoh" > @earlyattoh </a> 
-									</center>
-								</div>
-							</div>
-							<div class="row  vertical-center-row" style="margin-top: 50px;">
-								<div class="col-md-6">
-									<center> 
-										<img src="image/ace.jpg" alt="" id="img-size" class="img-circle img-responsive about-us-mobile" style="margin-left: 200px " >
-										<a href="https://twitter.com/Ace_KYD" style="margin-left: 200px " > @Ace_KYD </a>
-									</center>
-								</div>
-								<div class="col-md-6">
-									<center> 
-										<img src="image/abiodun.jpg" alt="" class="img-circle img-responsive about-us-mobile" id="img-size" style="margin-right: 200px"> <a href="https://twitter.com/Adetona77" style="margin-right: 200px"> @adetona77 </a>
-									</center>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-<!-- 
-			<div class="container-fluid">
-
-			<div class="row vertical-center-row" style="margin-top: 50px;font-family: open sans; font-size:25px">
-
+	  ga('create', 'UA-96571593-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body class="about-body">
+	<header class="container header">
+		<div class="row pull-right">
 			<div class="col-md-12">
-			<center>
-			 <p> ps : We've made the app <a href="https://github.com/Adetona/keepthechange">open source</a> , so knock out yourself</p>  
-			</center>
+				<a href="/" class="btn btn-secondary home-btn">HOME</a>
+			</div>
+		</div>
+	</header>
+	<section class="container about">
+		<div class="row">
+			<div class="col-md-12">
+				<p class="text-center title">About this</p>
+				<p class="text-center subtitle">It all started  with <a href="https://twitter.com/Missmoshiku/status/847173800198373379" style="color:red">this tweet.</a>
+				</p>
+				<p class="text-center content">This site was made purely for laughs , don't take it too seriously.<br>on the other hand, serious work was done to make it happen.</p>
+				<p class="text-center content">That being said , meet the "twitter boys" behind it.</p>
+			</div>
+		</div>
+	</section>
+	<section class="container makers">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-3">
+				<div class="inner">
+					<img src="image/Ben.jpg" alt="Dada Ben" class="img-responsive about-us-mobile">
+					<div class="about-us-link">
+						<p>Benjamin</p>
+						<a class="about-us-links" href="https://twitter.com/DadaBen_">@DadaBen_</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-md-3">
+				<div class="inner">
+					<img src="image/early.jpg" alt="Early Attoh" class="img-responsive about-us-mobile">
+					<div class="about-us-link">
+						<p>Early</p>
+						<a class="about-us-links" href="https://twitter.com/earlyattoh">@earlyattoh</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-md-3 col-md-offset-3">
+				<div class="inner">
+					<img src="image/ace.jpg" alt="Ace_Kyd" class="img-responsive about-us-mobile">
+					<div class="about-us-link">
+						<p>Wale</p>
+						<a class="about-us-links" href="https://twitter.com/Ace_KYD">@Ace_KYD</a>
+					</div>
+				</div>
 			</div>
 
-
+			<div class="col-md-3 col-md-3">
+				<div class="inner">
+					<img src="image/abiodun.jpg" alt="Adetona77" class="img-responsive about-us-mobile">
+					<div class="about-us-link">
+						<p>Abiodun</p>
+						<a class="about-us-links" href="https://twitter.com/Adetona77">@adetona77</a>
+					</div>
+				</div>
 			</div>
-
-
-			</div>
- -->
- 			<div class="footer">
-				<a href="index.html">HOME</a>
-			</div>
-			</body>  
-
-
-			</html>
+		</div>
+		<div class="col-md-12">
+			<p class="text-center open-source">PS : We've made the app <a href="https://github.com/Adetona/keepthechange">open source</a> , so knock yourself out. <i class="em em-wink"></i></p>
+		</div>
+	</section>
+</body>
+</html>

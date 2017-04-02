@@ -34,7 +34,7 @@ Based upon the backstory of the [#KeepTheChangeBruh](https://twitter.com/hashtag
 - [Benjamin Dada](https://github.com/Benjamin-Dada )  - Project manager
 - [Early Attoh](#) - _UI/UX_
 - [Ikechi Michael](https://github.com/mykeels) - _Documentation_ 😋
-- [Eluwande Yomi](#) - _Frontend Design_
+- [ Yomi Eluwande](#) - _Frontend Design_
 
 
 

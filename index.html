@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="assets/animate.css">
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/app.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,7 +32,7 @@
 				<p class="text-center title"> Find out how much change you can get from a date </p>
 				<p class="text-center next-btn"> <button type="button" ng-click="nextStep(step)" class="btn btn-secondary">Start</button> </p>
 			</div>
-			<a href="about.html" class="btn btn-secondary about-btn" id="button">About</a>
+			<a href="About.html" class="btn btn-secondary about-btn" id="button">About</a>
 		</div>
 		<div class="row step stepone" ng-show="step==1">
 			<div class="col-md-12 animated slideInLeft">
@@ -54,7 +56,7 @@
 				<p class="text-center title"> What bank do you use?</p>
 				<select class="form-control" id="select" ng-model="bank" ng-options="x for x in banks">
 				</select>
-				<p class="text-center next-btn" ng-show="bank"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary">Next</button></p>
+				<p class="text-center next-btn" ng-show="bank!='Choose'"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary">Next</button></p>
 			</div>
 		</div>
 		<div class="row step stepthree" ng-show="step==3">
@@ -80,7 +82,7 @@
 				<p class="text-center keepthechange">#KeepTheChangeBruh</p>
 				<p class="text-center share">
 					<a class="twitter-share-button"
-					  href="https://twitter.com/intent/tweet?text=Lol!%20Tweeps%2C%20I%20just%20found%20out%20I%20could%20keep%20₦{{change}}%20change%20on%20a%20₦{{refund}}%20date.%20Check%20yours%20now%20http%3A%2F%2Fkeepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae"
+					  href="https://twitter.com/intent/tweet?text=Lol!%20I%20can%20keep%20₦{{change | currency:'':0}}%20change%20on%20a%20₦{{refund | currency:'':0}}%20date.%20Check%20yours%20now%20www.keepthechangebruh.com.ng&hashtags=KeepTheChangeBruh,5kBae&via=keepthechangebruh"
 					  data-size="large"><span class="twitter-t">T</span>
 						<button type="button" class="twitter-btn btn btn-secondary" id="button">
 						SHARE ON TWITTER

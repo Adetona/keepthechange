@@ -71,12 +71,20 @@
 		<div class="row step steptwo" ng-show="step==2">
 			<div class="col-md-12 animated slideInLeft">
 				<p class="text-center title"> What bank do you use?</p>
-				<select class="form-control" id="select" ng-model="bank" ng-options="x for x in banks">
+				<select class="form-control" id="select-bank" ng-model="bank" ng-options="x for x in banks">
 				</select>
 				<p class="text-center next-btn" ng-show="bank!='Choose'"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary">Next</button></p>
 			</div>
 		</div>
 		<div class="row step stepthree" ng-show="step==3">
+			<div class="col-md-12 animated slideInLeft">
+				<p class="text-center title"> Where did you take her?</p>
+				<select class="form-control" id="select-location" ng-model="location" ng-options="x for x in locations">
+				</select>
+				<p class="text-center next-btn" ng-show="location!='Choose'"> <button ng-click="nextStep(step)" type="button" class="btn btn-secondary">Next</button></p>
+			</div>
+		</div>
+		<div class="row step stepfour" ng-show="step==4">
 			<div class="col-md-12 animated slideInLeft">
 				<p class="text-center title" id="text"> Oshey! Bahd guy! So how much did you spend on the date?  </p>
 				<p class="text-center subtitle"><label>Enter Value in Naira</label>
@@ -89,7 +97,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row step stepfour" ng-show="step==4">
+		<div class="row step stepfive" ng-show="step==5">
 			<div class="col-md-12 animated slideInLeft">
 				<p class="text-center title">Based on our calculations, your refund is</p>
 				<p class="text-center refund">
@@ -118,20 +126,15 @@
 		    $scope.dateCost;
 		    $scope.banks = ['Choose', 'Wema Bank', 'Zenith Bank', 'GTBank', 'Diamond Bank', 'UBA'];
 			$scope.bank = $scope.banks[0];
+			$scope.locations = [ 'Movies', 'Fancy Restaurant', "Not So fancy Restaurant","Club", "My house"];
+			$scope.location = $scope.locations[0];
+
 		    $scope.refund = 0;
 		    $scope.change;
 		    $scope.nextStep = function(step)
 		    {
-		    	// if(step == 1)
-		    	// {
-		    	// 	if($scope.gender == 'babe')
-		    	// 	{
-		    	// 		$scope.fail();
-		    	// 		return;
-		    	// 	}
-		    	// }
-		    	$scope.step += 1;
-		    }
+				$scope.step += 1;
+		    };
 
 		    $scope.fail = function()
 		    {
@@ -142,7 +145,7 @@
 		    {
 		    	$scope.refund = parseInt($scope.dateCost * 1.3158);
 		    	$scope.change = parseInt($scope.refund - $scope.dateCost);
-		    	$scope.step = 4;
+		    	$scope.step = 5;
 		    }
 
 		    $scope.reloadPage = function(){window.location.reload();}

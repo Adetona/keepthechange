@@ -30,6 +30,9 @@ body {
 .stepfour {
     background-color: #F4D06F;
 }
+.stepfive {
+    background-color: #3c6e71;
+}
 .next-btn:hover, .next-btn:focus {
     outline: none;
 }
@@ -74,6 +77,7 @@ body {
 .steptwo .title {
     font-size: 30px;
 }
+
 .steptwo select {
     width: 200px;
     margin: 0 auto;
@@ -84,6 +88,27 @@ body {
     -webkit-appearance: none;
     height: 45px;
 }
+.stepthree .title{
+    font-size: 30px;
+}
+.stepthree select {
+
+    width: 200px;
+    margin: 0 auto;
+    background-color: #2f7dab;
+    border: none;
+    border-radius: 0;
+    color: white;
+    -webkit-appearance: none;
+    height: 45px;
+}
+.stepthree .next-btn button {
+    margin-top: 50px;
+    width : 120px;
+    background-color: white;
+    color: black;
+    height: 45px;
+}
 .steptwo .next-btn button {
     margin-top: 50px;
     width : 120px;
@@ -91,45 +116,45 @@ body {
     color: black;
     height: 45px;
 }
-.stepthree .title {
+.stepfour .title {
     font-size: 20px;
 }
-.stepthree .subtitle {
+.stepfour .subtitle {
     margin-top: 50px;
-    color : white"
+    color : white;
 }
-.stepthree .amount-input {
+.stepfour .amount-input {
     width: 200px;
     margin: 0 auto
 }
-.stepthree .next-btn {
+.stepfour .next-btn {
     margin-top: 50px
 }
-.stepthree .next-btn button {
+.stepfour .next-btn button {
     width : 120px;
     background-color: white;
     color: black;
     height: 45px;
 }
-.stepfour .title{
+.stepfive .title{
     font-size: 20px
 }
-.stepfour .refund{
+.stepfive .refund{
     margin-top: 50px;
     font-size: 50px;
 }
-.stepfour .change{
+.stepfive .change{
     margin-top: 30px;
     font-size: 30px;
 }
-.stepfour .keepthechange{
+.stepfive .keepthechange{
     margin-top: 50px;
     font-size: 30px;
 }
-.stepfour .share {
+.stepfive .share {
     margin-top: 50px
 }
-.stepfour .next-btn{
+.stepfive .next-btn{
     background-color: #cccccc;
     font-family: futura;
     color: #676161;
@@ -140,19 +165,19 @@ body {
     letter-spacing: 1px;
     padding: 10px 15px;
 }
-.stepfour .next-btn:hover{
+.stepfive .next-btn:hover{
     background-color: #4099FF;
     font-family: futura;
     color: white !important;
 }
-.stepfour .twitter-t {
+.stepfive .twitter-t {
     background-color: #303d48;
     padding: 5px 10px 10px 10px;
     margin-right: -5px;
     color: white;
     border-radius: 3px 0 0 3px;
 }
-.stepfour .twitter-btn {
+.stepfive .twitter-btn {
     background-color: #4099ff;
     color: white;
     border-radius: 0 3px 3px 0;
@@ -160,7 +185,7 @@ body {
     font-size: 12px;
     padding: 6px 12px 9px 12px;
 }
-.stepfour .twitter-share-button:hover {
+.stepfive .twitter-share-button:hover {
     text-decoration: none
 }
 .about-btn {
